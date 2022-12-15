@@ -1,3 +1,8 @@
+# # installs
+# %%capture
+# !pip install spacy transformers
+# !pip install sentence_transformers
+
 # imports
 from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer

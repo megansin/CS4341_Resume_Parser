@@ -1,9 +1,11 @@
-# pip install pyresparser
+import pip
 from pyresparser import ResumeParser
 import os
 # pip install python-docx
 # pip install docx
 from docx import Document
+
+# pip.main(['install', 'pyresparser'])
 
 # Enter the path of the resume file
 # File should be .txt, .docx, .pdf

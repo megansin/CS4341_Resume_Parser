@@ -21,18 +21,17 @@ try:
     doc.save('resume.docx')
     # This next line does the parsing
     data = ResumeParser('resume.docx').get_extracted_data()
-    # prints the dictionary containing the extracted information
-    # Contains the following: name, email, mobile_number, skills, college_name, degree, designation, experience, company_names, no_of_pages, total_experience
-    print(data)
+    # This next line prints the skills (aka keywords) parsed from the resume
+    print(data['skills'])
 except:
     # This next line does the parsing
     data = ResumeParser(filed).get_extracted_data()
-    # prints the dictionary containing the extracted information
-    print(data)
+    # This next line prints the skills (aka keywords) parsed from the resume
+    print(data['skills'])
 
-# if you only want to obtain the skills parsed from the resume
+# if you only want to obtain the skills (aka keywords) parsed from the resume
 # print(data['skills'])
 
-
-
-
+# This next line prints the dictionary containing the extracted information
+# # print(data)
+# Contains the following: name, email, mobile_number, skills, college_name, degree, designation, experience, company_names, no_of_pages, total_experience

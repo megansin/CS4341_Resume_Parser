@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Flask App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+<script>
+
+function myFunction() {
+var text1= $('#text1').val();
+var text2= $('#text2').val();
+  $.ajax({
+              url: "/join",
+              type: "POST",
+              data: {text1:text1,
+              text2:text2}
+
+          }).done(function(response) {
+
+            var html= "<br><br><br><p> <b> Keywords : <b><p>";
+
+            response =response.result;
+                 $.each(response,function(key,val){
+                 console.log(val);
+                    html+="<p>"+val+"<p>"
+
+                });
+                html +="<br>";
+                $(".show-data").append(html);
+            });
+};
+
+  </script>
+<body>
+    <p>
+        AI Resume Checker<br><br>
+            Job Description <input type="text" id="text1" name="text1">
+            <button onclick="document.getElementById('text1').value = ''">Click here to clear</button><br><br>
+            Upload Resume <form action="/action_page.php"><input type="file" id="myFile" name="filename"></form>
+            <button id="resetbtn"type="button"onClick="myFile.form.reset()">Reset file</button><br><br>
+            <button id="submit" onclick="myFunction()">Submit</button>
+     </p>
+    <div class="show-data" >
+
+    </div>
+</body>
+</html>

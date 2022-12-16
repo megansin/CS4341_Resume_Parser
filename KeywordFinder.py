@@ -4,6 +4,7 @@
 # !pip install sentence_transformers
 
 # imports
+import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_kernels, laplacian_kernel
@@ -73,3 +74,5 @@ print("Pairwise Kernels (rbf) Score: ", kernels_likeness_score)
 print("Laplacian Kernel Score: ", laplacian_likeness_score)
 
 # pairwise kernels (rbf) does the best, so we will use this pairwise metric to find keywords from input job description
+
+# %%

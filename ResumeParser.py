@@ -1,9 +1,9 @@
+# pip install pyresparser
 from pyresparser import ResumeParser
 import os
+# pip install python-docx
+# pip install docx
 from docx import Document
-
-# pip.main(['install', 'pyresparser'])
-# pip.main(['install', 'docx'])
 
 # Enter the path of the resume file
 # File should be .txt, .docx, .pdf
@@ -23,7 +23,6 @@ try:
     data = ResumeParser('resume.docx').get_extracted_data()
     # This next line prints the skills (aka keywords) parsed from the resume
     print(data['skills'])
-
 except:
     # This next line does the parsing
     data = ResumeParser(filed).get_extracted_data()

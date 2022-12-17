@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template,jsonify
+from KeywordFinder import get_keywords
+from ResumeParser import resume_parser
 
 app = Flask(__name__)
 
-def do_something(jobDes,resume):
+def do_something(jobDes, resume):
    jobDes = jobDes
    resume = resume
    test1= 1

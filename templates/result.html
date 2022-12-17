@@ -39,22 +39,9 @@ var text2= $('#text2').val();
 
     <h1>AI Resume Checker</h1>
     <br>
-    <p>Paste Job Description Here:</p>
-    <div class="form-group">
-        <form action = "/result" method = "POST" enctype="multipart/form-data">
-            <textarea id="text1" name="text1"></textarea>
-            <br>
-            <button onclick="document.getElementById('text1').value = ''">Click here to clear</button>
-            <br>
-            <br>
-            <label for="filename">Upload Resume</label>
-            <input type="file" id="filename" name="filename">
-            <button id="resetbtn"type="button"onClick="document.getElementById('filename').value = ''">Reset file</button>
-            <br>
-            <br>
-            <input type = "submit">
-        </form>
-    </div>
+    <h2>Results</h2>
+    <p>Keywords found in job description: </p>
+    <p>{{ keywords }}</p>
 
     <div class="show-data" >
 

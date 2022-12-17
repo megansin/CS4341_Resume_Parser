@@ -1,13 +1,16 @@
 # pip install pyresparser
 # pip install python-docx
-
+import spacy
 from pyresparser import ResumeParser
 from docx import Document
 import nltk
 from nltk.corpus import stopwords
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
 
 nltk.download('stopwords')
 STOPWORDS = set(stopwords.words('english'))
+# spacy.load("en_core_web_sm")
 
 # pip.main(['install', 'pyresparser'])
 

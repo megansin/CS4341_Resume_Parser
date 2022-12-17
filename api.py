@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template,jsonify
-from KeywordFinder import get_keywords
-from ResumeParser import resume_parser
+# from KeywordFinder import get_keywords
+# from ResumeParser import resume_parser
 
 app = Flask(__name__)
 
@@ -29,4 +29,4 @@ def my_form_post():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')

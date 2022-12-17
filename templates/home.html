@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+{% extends "base.html" %} {% block title %}Resume Parser Web App{% endblock %} {% block content
+    %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>First Flask App</title>
+    <title>Resume Parser Flask App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
@@ -35,16 +36,29 @@ var text2= $('#text2').val();
 
   </script>
 <body>
-    <p>
-        AI Resume Checker<br><br>
-            Job Description <input type="text" id="text1" name="text1">
-            <button onclick="document.getElementById('text1').value = ''">Click here to clear</button><br><br>
-            Upload Resume <form action="/action_page.php"><input type="file" id="myFile" name="filename"></form>
-            <button id="resetbtn"type="button"onClick="myFile.form.reset()">Reset file</button><br><br>
-            <button id="submit" onclick="myFunction()">Submit</button>
-     </p>
+
+    <h1>AI Resume Checker</h1>
+    <br>
+    <p>Paste Job Description Here:</p>
+    <div class="form-group">
+        <textarea id="text1" name="text1"></textarea>
+        <br>
+        <button onclick="document.getElementById('text1').value = ''">Click here to clear</button>
+        <br>
+        <br>
+        <label for="myFile">Upload Resume</label>
+        <input type="file" id="myFile" name="filename">
+        <button id="resetbtn"type="button"onClick="document.getElementById('myFile').value = ''">Reset file</button>
+        <br>
+        <br>
+        <button id="submit" onclick="myFunction()">Submit</button>
+    </div>
+
     <div class="show-data" >
 
     </div>
+
 </body>
 </html>
+
+{% endblock %}

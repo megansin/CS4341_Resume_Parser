@@ -8,13 +8,12 @@ from nltk.corpus import stopwords
 
 # TODO: UNCOMMENT 4 LINES BELOW TO DOWNLOAD NECESSARY PACKAGES BEFORE RUNNING:
 # nltk.download('stopwords')
-pip.main(['install', 'spacy==2.3.5'])
-pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
+# pip.main(['install', 'spacy==2.3.5'])
+# pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
+# pip.main(['install', 'pyresparser'])
 
 STOPWORDS = set(stopwords.words('english'))
 
-# pip.main(['install', 'pyresparser'])
-#
 def resume_parser(file_path):
     # Enter the path of the resume file
     # File should be .txt, .docx, .pdf

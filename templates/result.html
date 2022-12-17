@@ -40,12 +40,22 @@ var text2= $('#text2').val();
     <h1>AI Resume Checker</h1>
     <br>
     <h2>Results</h2>
-    <p>Keywords found in job description: </p>
-    <p>{{ keywords }}</p>
 
-    <div class="show-data" >
-
+    <div class="show-match" >
+        <p>Ratio of keywords found: </p>
+        <p>{{ ratio }}</p>
+        <br>
+        <p>Which keywords found: </p>
+        <p>{{ dict }}</p>
     </div>
+
+
+    <div class="show-resume" >
+        <p>Parsed resume: </p>
+        <p>{{ parsed_resume }}</p>
+    </div>
+
+
 
 </body>
 </html>

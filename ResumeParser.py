@@ -1,19 +1,20 @@
 # pip install pyresparser
 # pip install python-docx
-import spacy
+import pip
 from pyresparser import ResumeParser
 from docx import Document
 import nltk
 from nltk.corpus import stopwords
-import spacy.cli
-spacy.cli.download("en_core_web_sm")
 
-nltk.download('stopwords')
+# TODO: UNCOMMENT 4 LINES BELOW TO DOWNLOAD NECESSARY PACKAGES BEFORE RUNNING:
+# nltk.download('stopwords')
+pip.main(['install', 'spacy==2.3.5'])
+pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
+
 STOPWORDS = set(stopwords.words('english'))
-# spacy.load("en_core_web_sm")
 
 # pip.main(['install', 'pyresparser'])
-
+#
 def resume_parser(file_path):
     # Enter the path of the resume file
     # File should be .txt, .docx, .pdf
@@ -32,16 +33,17 @@ def resume_parser(file_path):
         # This next line does the parsing
         data = ResumeParser('resume.docx').get_extracted_data()
         # This next line prints the skills (aka keywords) parsed from the resume
-        print(data['skills'])
+        # print(data['skills'])
     except:
         # This next line does the parsing
-        data = ResumeParser(filed).get_extracted_data()
+        data = ResumeParser(file_path).get_extracted_data()
         # This next line prints the skills (aka keywords) parsed from the resume
-        print(data['skills'])
+        # print(data['skills'])
 
     # if you only want to obtain the skills (aka keywords) parsed from the resume
     # print(data['skills'])
 
     # This next line prints the dictionary containing the extracted information
     # # print(data)
+    return data
     # Contains the following: name, email, mobile_number, skills, college_name, degree, designation, experience, company_names, no_of_pages, total_experience

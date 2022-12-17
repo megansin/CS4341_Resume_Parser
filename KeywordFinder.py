@@ -8,9 +8,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_kernels, laplacian_kernel
 
-
-# Part II: find keywords in pasted job description
-
 # sample job description 1
 test_text1 = """
 Technologies & Tools We Use:

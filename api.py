@@ -1,10 +1,11 @@
 import os
-from functools import reduce
-
+import pip
 from flask import Flask, request, render_template, jsonify, send_from_directory, abort
 from werkzeug.utils import secure_filename
 from KeywordFinder import get_keywords
 from ResumeParser import resume_parser
+from fuzzywuzzy import fuzz
+
 
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = ['.docx', '.pdf', '.txt']

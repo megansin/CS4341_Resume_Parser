@@ -4,8 +4,8 @@ from flask import Flask, request, render_template, flash, redirect
 from werkzeug.utils import secure_filename
 from KeywordFinder import get_keywords
 from ResumeParser import resume_parser
-import difflib
 from fuzzywuzzy import fuzz
+
 
 app = Flask(__name__)
 app.secret_key = "something"

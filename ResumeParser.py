@@ -1,17 +1,5 @@
-# TODO: UNCOMMENT LINES BELOW TO DOWNLOAD NECESSARY PACKAGES BEFORE RUNNING:
-# import pip
-# pip.main(['install', 'spacy==2.3.5'])
-# pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
-# pip.main(['install', 'python-docx'])
-# pip.main(['install', 'pyresparser'])
-
-
 from pyresparser import ResumeParser
 from docx import Document
-
-
-import nltk
-nltk.download('stopwords')
 from nltk.corpus import stopwords
 STOPWORDS = set(stopwords.words('english'))
 

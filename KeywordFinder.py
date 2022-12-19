@@ -1,9 +1,3 @@
-# imports
-import sklearn
-import pip
-
-# pip.main(['install', 'sentence_transformers'])
-
 from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_kernels, laplacian_kernel

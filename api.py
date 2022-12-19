@@ -1,5 +1,16 @@
-import os
+# TODO: please uncomment block below and download the following packages using pip
 import pip
+pip.main(['install', 'spacy==2.3.5'])
+pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
+pip.main(['install', 'python-docx'])
+pip.main(['install', 'pyresparser'])
+import nltk
+nltk.download('stopwords')
+
+# # TODO: if this doesn't work (nltk.download('stopwords')), please run the following in terminal
+# # python3 -m nltk.downloader stopwords
+
+import os
 from flask import Flask, request, render_template, flash, redirect
 from werkzeug.utils import secure_filename
 from KeywordFinder import get_keywords

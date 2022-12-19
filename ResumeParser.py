@@ -1,32 +1,18 @@
-import io
-
-import pip
-from pyresparser import ResumeParser
-from docx import Document
-from nltk.corpus import stopwords
-from pdfminer.converter import TextConverter
-from pdfminer.pdfinterp import PDFPageInterpreter
-from pdfminer.pdfinterp import PDFResourceManager
-from pdfminer.layout import LAParams
-from pdfminer.pdfpage import PDFPage
-import docx2txt
-import spacy
-import pandas as pd
-from spacy.matcher import Matcher
-import re
-
-
 # TODO: UNCOMMENT LINES BELOW TO DOWNLOAD NECESSARY PACKAGES BEFORE RUNNING:
+# import pip
 # nltk.download('stopwords')
 # pip.main(['install', 'spacy==2.3.5'])
 # pip.main(['install', 'https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz'])
 # pip.main(['install', 'python-docx'])
 # pip.main(['install', 'pyresparser'])
-# pip.main(['install', 'pdfminer.six'])
-# pip.main(['install', 'doc2text'])
+
+
+from pyresparser import ResumeParser
+from docx import Document
+from nltk.corpus import stopwords
+
 
 STOPWORDS = set(stopwords.words('english'))
-nlp = spacy.load('en_core_web_sm')
 
 # matcher = Matcher(nlp.vocab)
 # noun_chunks = nlp.noun_chunks()
@@ -176,7 +162,7 @@ def resume_parser(file_path):
     # File should be .txt, .docx, .pdf
 
     # Parse the resume file
-    if file_path.contains(".txt"):
+    if '.txt' in file_path:
         # This next line converts the .txt file to .docx
         doc = Document()
         # This next line opens the .txt file

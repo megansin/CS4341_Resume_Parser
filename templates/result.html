@@ -34,7 +34,7 @@ var text2= $('#text2').val();
             });
 };
 
-  </script>
+</script>
 <body>
 
     <h1>AI Resume Checker</h1>
@@ -42,14 +42,15 @@ var text2= $('#text2').val();
     <h2>Results</h2>
 
     <div class="show-match" >
-        <p>Ratio of keywords found: </p>
-        <p>{{ ratio }}</p>
+        <p>Percent match: {{ ratio }}%</p>
         <br>
-        <p>Which keywords found: </p>
-        <p>{{ dict }}</p>
+        <p>Keywords found: </p>
+        <p>{{ found }}</p>
+        <br>
+        <p>Keywords missing: </p>
+        <p>{{ missing }}</p>
     </div>
-
-
+    <hr>
     <div class="show-resume" >
         <p>Parsed resume: </p>
         <p>{{ parsed_resume }}</p>

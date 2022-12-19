@@ -9,7 +9,7 @@ from fuzzywuzzy import fuzz
 
 app = Flask(__name__)
 app.config['UPLOAD_EXTENSIONS'] = ['.docx', '.pdf', '.txt']
-app.config['UPLOAD_PATH'] = 'uploads'
+app.config['UPLOAD_PATH'] = '.'
 
 
 def intersect_keywords(resume, keywords):

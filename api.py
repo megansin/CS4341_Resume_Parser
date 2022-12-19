@@ -14,16 +14,22 @@ app.config['UPLOAD_PATH'] = '.'
 
 
 def intersect_keywords(resume, keywords):
-    skills = list(filter(lambda item: item is not None, resume['skills']))
-    degree = list(filter(lambda item: item is not None, resume['degree']))
-    experience = list(filter(lambda item: item is not None, resume['experience']))
+    print(resume)
     resume_vals = []
-    for s in skills:
-        resume_vals.extend(s.lower().split())
-    for d in degree:
-        resume_vals.extend(d.lower().split())
-    for e in experience:
-        resume_vals.extend(e.lower().split())
+    if resume['skills'] is not None:
+        skills = resume['skills']
+        for s in skills:
+            resume_vals.extend(s.lower().split())
+
+    if resume['degree'] is not None:
+        degree = resume['degree']
+        for d in degree:
+            resume_vals.extend(d.lower().split())
+
+    if resume['experience'] is not None:
+        experience = resume['experience']
+        for e in experience:
+            resume_vals.extend(e.lower().split())
 
     found = set(keywords).intersection(set(resume_vals))
     missing = set(keywords) - found

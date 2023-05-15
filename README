@@ -1,9 +1,7 @@
 This is a Flask application where users can upload their resume (.docx, .txt. or .pdf file) and paste a job description to see how well their resume fits the keywords found in the job description.
 
 To use our application:
-1) Please ensure that all necessary packages are downloaded before running. There is a comment located at the top of the api.py
-file with packages that need to be downloaded using pip. Downloading all packages should take about 5 minutes. Packages that
-are used in this project are listed below:
+1) Please ensure that all necessary packages are downloaded before running. There is a comment located at the top of the api.py file with packages that need to be downloaded using pip. Downloading all packages should take about 5 minutes. Packages that are used in this project are listed below:
 - pyreparser
 - python-docx
 - nltk
@@ -14,19 +12,16 @@ are used in this project are listed below:
 - scikit-learn (can be imported in PyCharm Packages)
 - sentence_transformers (can be imported in PyCharm Packages)
 
-2) To run the application, please run the api.py file. To see the web app, click on the link in console and it will open
-in your default web browser (i.e. Running on http://127.0.0.1:5000).
+2) To run the application, please run the api.py file. To see the web app, click on the link in console and it will open in your default web browser (i.e. Running on http://127.0.0.1:5000).
 
-3) Paste in a job description in the text box. Note: you may expand the box and edit the text as needed. Additionally
-there is a button where you may clear the text box.
+3) Paste in a job description in the text box. Note: you may expand the box and edit the text as needed. Additionally there is a button where you may clear the text box.
 
 4) Upload a resume file (must be .docx, .txt, or .pdf file). Note: there is a button where you may clear your uploaded file.
 
 5) Click submit for your results. Note: submit button will not work if job description box is empty or if no file is uploaded.
 
 Understanding the results:
-The first line will provide users the percentage match of their resume with keywords the application found in the job
-description.
+The first line will provide users the percentage match of their resume with keywords the application found in the job description.
 
 The next line shows which keywords were found in the uploaded resume.
 

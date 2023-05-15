@@ -1,5 +1,4 @@
-This is a Flask application where users can upload their resume (.docx, .txt. or .pdf file) and paste a job description to see
-how well their resume fits the keywords found in the job description.
+This is a Flask application where users can upload their resume (.docx, .txt. or .pdf file) and paste a job description to see how well their resume fits the keywords found in the job description.
 
 To use our application:
 1) Please ensure that all necessary packages are downloaded before running. There is a comment located at the top of the api.py
